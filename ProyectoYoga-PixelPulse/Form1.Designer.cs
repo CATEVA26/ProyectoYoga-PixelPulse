@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            textBox1 = new TextBox();
+            BusquedaTextBox = new TextBox();
             label1 = new Label();
-            button1 = new Button();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            BusquedaButton = new Button();
+            ESTextBox = new TextBox();
+            ENTextBox = new TextBox();
+            MorfemaTextBox = new TextBox();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             SuspendLayout();
             // 
-            // textBox1
+            // BusquedaTextBox
             // 
-            textBox1.Location = new Point(248, 108);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(267, 27);
-            textBox1.TabIndex = 0;
+            BusquedaTextBox.Location = new Point(248, 108);
+            BusquedaTextBox.Name = "BusquedaTextBox";
+            BusquedaTextBox.Size = new Size(267, 27);
+            BusquedaTextBox.TabIndex = 0;
             // 
             // label1
             // 
@@ -59,43 +59,43 @@
             label1.Text = "Diccionario de asanas";
             label1.Click += label1_Click;
             // 
-            // button1
+            // BusquedaButton
             // 
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(521, 95);
-            button1.Name = "button1";
-            button1.Size = new Size(53, 52);
-            button1.TabIndex = 2;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            BusquedaButton.Image = (Image)resources.GetObject("BusquedaButton.Image");
+            BusquedaButton.Location = new Point(521, 95);
+            BusquedaButton.Name = "BusquedaButton";
+            BusquedaButton.Size = new Size(53, 52);
+            BusquedaButton.TabIndex = 2;
+            BusquedaButton.UseVisualStyleBackColor = true;
+            BusquedaButton.Click += button1_Click;
             // 
-            // textBox2
+            // ESTextBox
             // 
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(65, 201);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(285, 170);
-            textBox2.TabIndex = 3;
-            textBox2.TextAlign = HorizontalAlignment.Center;
+            ESTextBox.BorderStyle = BorderStyle.FixedSingle;
+            ESTextBox.Location = new Point(65, 201);
+            ESTextBox.Multiline = true;
+            ESTextBox.Name = "ESTextBox";
+            ESTextBox.Size = new Size(285, 170);
+            ESTextBox.TabIndex = 3;
+            ESTextBox.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox3
+            // ENTextBox
             // 
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Location = new Point(396, 201);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(285, 170);
-            textBox3.TabIndex = 4;
+            ENTextBox.BorderStyle = BorderStyle.FixedSingle;
+            ENTextBox.Location = new Point(396, 201);
+            ENTextBox.Multiline = true;
+            ENTextBox.Name = "ENTextBox";
+            ENTextBox.Size = new Size(285, 170);
+            ENTextBox.TabIndex = 4;
             // 
-            // textBox4
+            // MorfemaTextBox
             // 
-            textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.Location = new Point(147, 423);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(427, 170);
-            textBox4.TabIndex = 5;
+            MorfemaTextBox.BorderStyle = BorderStyle.FixedSingle;
+            MorfemaTextBox.Location = new Point(147, 423);
+            MorfemaTextBox.Multiline = true;
+            MorfemaTextBox.Name = "MorfemaTextBox";
+            MorfemaTextBox.Size = new Size(427, 170);
+            MorfemaTextBox.TabIndex = 5;
             // 
             // label2
             // 
@@ -139,12 +139,12 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(button1);
+            Controls.Add(MorfemaTextBox);
+            Controls.Add(ENTextBox);
+            Controls.Add(ESTextBox);
+            Controls.Add(BusquedaButton);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(BusquedaTextBox);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
@@ -154,12 +154,12 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox BusquedaTextBox;
         private Label label1;
-        private Button button1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private Button BusquedaButton;
+        private TextBox ESTextBox;
+        private TextBox ENTextBox;
+        private TextBox MorfemaTextBox;
         private Label label2;
         private Label label3;
         private Label label4;
