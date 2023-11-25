@@ -8,7 +8,7 @@ namespace ProyectoYoga_PixelPulse
 {
     internal class Morfema
     {
-        public static Dictionary<string, string> diccionarioSansEs = new Dictionary<string, string>() {
+        public static Dictionary<string, string> diccionarioSansEs = new() {
     {"Asana",Res.postura} ,
     {"Adho",Res.abajo},
     {"Ardha",Res.mitad},
@@ -38,7 +38,7 @@ namespace ProyectoYoga_PixelPulse
         private static List<string> TraducirMorfema(string? sans)
         {
             string[] palabras = sans.Split(" ");
-            List<string> morfemas = new List<string>();
+            List<string> morfemas = new();
 
             foreach (string palabra in palabras)
             {
