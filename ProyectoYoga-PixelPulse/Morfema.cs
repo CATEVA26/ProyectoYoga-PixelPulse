@@ -39,7 +39,6 @@ namespace ProyectoYoga_PixelPulse
         {
             string[] palabras = sans.Split(" ");
             List<string> morfemas = new();
-
             foreach (string palabra in palabras)
             {
                 if (diccionarioSansEs.ContainsKey(palabra))
@@ -49,10 +48,8 @@ namespace ProyectoYoga_PixelPulse
                 else
                 {
                     string asana = palabra.Replace("asana", "a Asana");
-                    TraducirMorfema(asana);
+                    morfemas.AddRange(TraducirMorfema(asana));
                 }
-
-
             }
             return morfemas;
 

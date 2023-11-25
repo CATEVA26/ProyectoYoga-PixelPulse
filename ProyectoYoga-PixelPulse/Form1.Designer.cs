@@ -29,127 +29,131 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            BusquedaTextBox = new TextBox();
-            label1 = new Label();
-            BusquedaButton = new Button();
-            ESTextBox = new TextBox();
-            ENTextBox = new TextBox();
-            MorfemaTextBox = new TextBox();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            SuspendLayout();
+            this.BusquedaTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BusquedaButton = new System.Windows.Forms.Button();
+            this.ESTextBox = new System.Windows.Forms.TextBox();
+            this.ENTextBox = new System.Windows.Forms.TextBox();
+            this.MorfemaTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
             // 
             // BusquedaTextBox
             // 
-            BusquedaTextBox.Location = new Point(248, 108);
-            BusquedaTextBox.Name = "BusquedaTextBox";
-            BusquedaTextBox.Size = new Size(267, 27);
-            BusquedaTextBox.TabIndex = 0;
+            this.BusquedaTextBox.Location = new System.Drawing.Point(217, 81);
+            this.BusquedaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BusquedaTextBox.Name = "BusquedaTextBox";
+            this.BusquedaTextBox.Size = new System.Drawing.Size(234, 23);
+            this.BusquedaTextBox.TabIndex = 0;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Enabled = false;
-            label1.Font = new Font("Sitka Banner", 16.1999989F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(270, 57);
-            label1.Name = "label1";
-            label1.Size = new Size(237, 39);
-            label1.TabIndex = 1;
-            label1.Text = "Diccionario de asanas";
-            label1.Click += label1_Click;
+            this.label1.AutoSize = true;
+            this.label1.Enabled = false;
+            this.label1.Font = new System.Drawing.Font("Sitka Banner", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(236, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(190, 32);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Diccionario de asanas";
             // 
             // BusquedaButton
             // 
-            BusquedaButton.Image = (Image)resources.GetObject("BusquedaButton.Image");
-            BusquedaButton.Location = new Point(521, 95);
-            BusquedaButton.Name = "BusquedaButton";
-            BusquedaButton.Size = new Size(53, 52);
-            BusquedaButton.TabIndex = 2;
-            BusquedaButton.UseVisualStyleBackColor = true;
-            BusquedaButton.Click += button1_Click;
+            this.BusquedaButton.Image = ((System.Drawing.Image)(resources.GetObject("BusquedaButton.Image")));
+            this.BusquedaButton.Location = new System.Drawing.Point(456, 71);
+            this.BusquedaButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BusquedaButton.Name = "BusquedaButton";
+            this.BusquedaButton.Size = new System.Drawing.Size(46, 39);
+            this.BusquedaButton.TabIndex = 2;
+            this.BusquedaButton.UseVisualStyleBackColor = true;
+            this.BusquedaButton.Click += new System.EventHandler(this.BusquedaButton_Click);
             // 
             // ESTextBox
             // 
-            ESTextBox.BorderStyle = BorderStyle.FixedSingle;
-            ESTextBox.Location = new Point(65, 201);
-            ESTextBox.Multiline = true;
-            ESTextBox.Name = "ESTextBox";
-            ESTextBox.Size = new Size(285, 170);
-            ESTextBox.TabIndex = 3;
-            ESTextBox.TextAlign = HorizontalAlignment.Center;
+            this.ESTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ESTextBox.Location = new System.Drawing.Point(57, 151);
+            this.ESTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ESTextBox.Multiline = true;
+            this.ESTextBox.Name = "ESTextBox";
+            this.ESTextBox.Size = new System.Drawing.Size(250, 128);
+            this.ESTextBox.TabIndex = 3;
+            this.ESTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ENTextBox
             // 
-            ENTextBox.BorderStyle = BorderStyle.FixedSingle;
-            ENTextBox.Location = new Point(396, 201);
-            ENTextBox.Multiline = true;
-            ENTextBox.Name = "ENTextBox";
-            ENTextBox.Size = new Size(285, 170);
-            ENTextBox.TabIndex = 4;
+            this.ENTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ENTextBox.Location = new System.Drawing.Point(346, 151);
+            this.ENTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ENTextBox.Multiline = true;
+            this.ENTextBox.Name = "ENTextBox";
+            this.ENTextBox.Size = new System.Drawing.Size(250, 128);
+            this.ENTextBox.TabIndex = 4;
             // 
             // MorfemaTextBox
             // 
-            MorfemaTextBox.BorderStyle = BorderStyle.FixedSingle;
-            MorfemaTextBox.Location = new Point(147, 423);
-            MorfemaTextBox.Multiline = true;
-            MorfemaTextBox.Name = "MorfemaTextBox";
-            MorfemaTextBox.Size = new Size(427, 170);
-            MorfemaTextBox.TabIndex = 5;
+            this.MorfemaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MorfemaTextBox.Location = new System.Drawing.Point(129, 317);
+            this.MorfemaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MorfemaTextBox.Multiline = true;
+            this.MorfemaTextBox.Name = "MorfemaTextBox";
+            this.MorfemaTextBox.Size = new System.Drawing.Size(374, 128);
+            this.MorfemaTextBox.TabIndex = 5;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Enabled = false;
-            label2.Font = new Font("Sitka Banner", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(65, 165);
-            label2.Name = "label2";
-            label2.Size = new Size(84, 33);
-            label2.TabIndex = 6;
-            label2.Text = "Español";
-            label2.Click += label2_Click;
+            this.label2.AutoSize = true;
+            this.label2.Enabled = false;
+            this.label2.Font = new System.Drawing.Font("Sitka Banner", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(57, 124);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 28);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Español";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Enabled = false;
-            label3.Font = new Font("Sitka Banner", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(396, 165);
-            label3.Name = "label3";
-            label3.Size = new Size(65, 33);
-            label3.TabIndex = 7;
-            label3.Text = "Ingles";
+            this.label3.AutoSize = true;
+            this.label3.Enabled = false;
+            this.label3.Font = new System.Drawing.Font("Sitka Banner", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(346, 124);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 28);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Ingles";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Enabled = false;
-            label4.Font = new Font("Sitka Banner", 13.7999992F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(147, 387);
-            label4.Name = "label4";
-            label4.Size = new Size(107, 33);
-            label4.TabIndex = 8;
-            label4.Text = "Morfemas ";
+            this.label4.AutoSize = true;
+            this.label4.Enabled = false;
+            this.label4.Font = new System.Drawing.Font("Sitka Banner", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(129, 290);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 28);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Morfemas ";
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(729, 636);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(MorfemaTextBox);
-            Controls.Add(ENTextBox);
-            Controls.Add(ESTextBox);
-            Controls.Add(BusquedaButton);
-            Controls.Add(label1);
-            Controls.Add(BusquedaTextBox);
-            Name = "Form1";
-            Text = "Form1";
-            Load += Form1_Load;
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(638, 477);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.MorfemaTextBox);
+            this.Controls.Add(this.ENTextBox);
+            this.Controls.Add(this.ESTextBox);
+            this.Controls.Add(this.BusquedaButton);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BusquedaTextBox);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

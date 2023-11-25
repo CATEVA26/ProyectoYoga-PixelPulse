@@ -26,5 +26,11 @@ namespace ProyectoYoga_PixelPulse
         {
 
         }
+
+        private void BusquedaButton_Click(object sender, EventArgs e)
+        {
+            string textoAMorfema = BusquedaTextBox.Text;
+            MorfemaTextBox.Text = string.Join("\r\n", Morfema.TraducirMorfema(textoAMorfema));
+        }
     }
 }
