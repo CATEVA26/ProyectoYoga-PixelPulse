@@ -35,7 +35,7 @@ namespace ProyectoYoga_PixelPulse
     {"Sirsa", Res.cabeza}
     };
        
-        private static List<string> TraducirMorfema(string? sans)
+        public static List<string> TraducirMorfema(string? sans)
         {
             string[] palabras = sans.Split(" ");
             List<string> morfemas = new();
