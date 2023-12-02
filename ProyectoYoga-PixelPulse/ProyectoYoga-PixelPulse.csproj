@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Azure.AI.Translation.Document" Version="1.0.0" />
     <PackageReference Include="MySql.Data" Version="8.2.0" />
   </ItemGroup>
 
