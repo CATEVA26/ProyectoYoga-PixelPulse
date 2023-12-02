@@ -45,13 +45,11 @@ namespace ProyectoYoga_PixelPulse
                 {
                     // Leer el contenido de la respuesta como una cadena
                     string responseBody = await response.Content.ReadAsStringAsync();
-                    
-                    // Deserializar el JSON al objeto TranslationResult
+                    string respondeBody = responseBody.Replace('[',' ').Replace(']',' ');
+                    var data = JObject.Parse(respondeBody);
+                    var transalation = Convert.ToString(data["translation_text"]); ;
 
-                    TranslationResult[] resultArray = Newtonsoft.Json.JsonConvert.DeserializeObject<TranslationResult[]>(responseBody);
-
-                    MessageBox.Show(responseBody);
-                    return resultArray?[0]?.TranslationText;
+                    return transalation;
                 }
                 else
                 {
