@@ -160,6 +160,15 @@ namespace ProyectoYoga_PixelPulse {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a montaña.
+        /// </summary>
+        internal static string montania {
+            get {
+                return ResourceManager.GetString("montania", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a niño.
         /// </summary>
         internal static string ninio {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ProyectoYoga_PixelPulse
@@ -32,16 +33,24 @@ namespace ProyectoYoga_PixelPulse
     {"Hasta",Res.mano},
     {"Parivrtta",Res.invertido},
     {"Janu", Res.rodilla},
-    {"Sirsa", Res.cabeza}
+    {"Sirsa", Res.cabeza},
+    {"Tada",Res.montania } 
+            
     };
-       
+
         public static List<string> TraducirMorfema(string? sans)
         {
-            string[] palabras = sans.Split(" ");
+           
+            string[] palabras = sans.Split(' ');
             List<string> morfemas = new();
+            if (TieneNumerosRomanos(palabras[palabras.Length - 1])) {
+                string oracion = string.Join(" ",palabras.Take(palabras.Length-1));
+                return TraducirMorfema(oracion);
+            }
+            
             foreach (string palabra in palabras)
             {
-                if (diccionarioSansEs.ContainsKey(palabra))
+                if (diccionarioSansEs.TryGetValue(palabra, out string traduccion)) 
                 {
                     morfemas.Add(palabra+":"+ diccionarioSansEs[palabra]);
                 }
@@ -54,14 +63,10 @@ namespace ProyectoYoga_PixelPulse
             return morfemas;
 
         }
-
-
-
-        private static void ConvertirEn()
+        private static bool TieneNumerosRomanos(string cadena)
         {
-            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-US");
+            string patron = @"^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$";
+            return Regex.IsMatch(cadena, patron);
         }
-
-
     }
 }

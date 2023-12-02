@@ -1,8 +1,8 @@
 namespace ProyectoYoga_PixelPulse
 {
-    public partial class Form1 : Form
+    public partial class DiccionarioYoga : Form
     {
-        public Form1()
+        public DiccionarioYoga()
         {
             InitializeComponent();
         }
@@ -30,7 +30,9 @@ namespace ProyectoYoga_PixelPulse
         private void BusquedaButton_Click(object sender, EventArgs e)
         {
             string textoAMorfema = BusquedaTextBox.Text;
-            MorfemaTextBox.Text = string.Join("\r\n", Morfema.TraducirMorfema(textoAMorfema));
+            Postura postura = new Postura(textoAMorfema);
+            MorfemaTextBox.Text = string.Join("\r\n", postura.GetMorfemas());
+            ESTextBox.Text = postura.GetDescripción();
         }
     }
 }

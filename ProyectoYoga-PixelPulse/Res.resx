@@ -150,6 +150,9 @@
   <data name="mitad" xml:space="preserve">
     <value>mitad</value>
   </data>
+  <data name="montania" xml:space="preserve">
+    <value>montaña</value>
+  </data>
   <data name="ninio" xml:space="preserve">
     <value>niño</value>
   </data>
