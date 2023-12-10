@@ -34,32 +34,42 @@ namespace ProyectoYoga_PixelPulse
     {"Parivrtta",Res.invertido},
     {"Janu", Res.rodilla},
     {"Sirsa", Res.cabeza},
-    {"Tada",Res.montania } 
-            
+    {"Tada",Res.montania }
+
     };
 
         public static List<string> TraducirMorfema(string? sans)
         {
-           
-            string[] palabras = sans.Split(' ');
+
+            if (sans == null) return new List<string>();
+            
             List<string> morfemas = new();
-            if (TieneNumerosRomanos(palabras[palabras.Length - 1])) {
-                string oracion = string.Join(" ",palabras.Take(palabras.Length-1));
+
+            string[] palabras = sans.Split(' ');
+
+            if (TieneNumerosRomanos(palabras[palabras.Length - 1]))
+            {
+                string oracion = string.Join(" ", palabras.Take(palabras.Length - 1));
                 return TraducirMorfema(oracion);
             }
-            
             foreach (string palabra in palabras)
             {
-                if (diccionarioSansEs.TryGetValue(palabra, out string traduccion)) 
+                if (diccionarioSansEs.TryGetValue(palabra, out string traduccion))
                 {
-                    morfemas.Add(palabra+":"+ diccionarioSansEs[palabra]);
+                    morfemas.Add(palabra + ": " + diccionarioSansEs[palabra]);
+                }
+                else if (palabra.EndsWith("asana", StringComparison.OrdinalIgnoreCase))
+                {
+                    // Separar la palabra y agregar la 'A' a la otra parte
+                    string otraParte = palabra.Substring(0, palabra.Length - 5);
+                    morfemas.AddRange(TraducirMorfema(otraParte + "a Asana"));
                 }
                 else
                 {
-                    string asana = palabra.Replace("asana", "a Asana");
-                    morfemas.AddRange(TraducirMorfema(asana));
+                    return null;
                 }
             }
+
             return morfemas;
 
         }

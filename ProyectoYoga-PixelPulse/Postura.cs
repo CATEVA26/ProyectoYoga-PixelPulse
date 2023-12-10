@@ -4,11 +4,12 @@ using System.Linq;
 using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using ZstdSharp;
 
 namespace ProyectoYoga_PixelPulse
 {
-   
+
     internal class Postura
     {
         private string? descripcion;
@@ -36,16 +37,17 @@ namespace ProyectoYoga_PixelPulse
             {"Parivrtta Janu Sirsasana","Postura de la Cabeza a la Rodilla Invertida" }
 
         };
-        public Postura(string fraseAtraducir) {
+        public Postura(string fraseAtraducir)
+        {
             morfemas = Morfema.TraducirMorfema(fraseAtraducir);
             descripcion = TraducirAEs(fraseAtraducir);
         }
 
-        private string? TraducirAEs(string fraseAtraducir)
+        public string? TraducirAEs(string fraseAtraducir)
         {
-            string[] palabrasSans = fraseAtraducir.Split(new[] {'\t', '\n', '\r', ',', '.' });
+            string[] palabrasSans = fraseAtraducir.Split(new[] { '\t', '\n', '\r', ',', '.' });
             Console.WriteLine(palabrasSans[0]);
-            List<string> palabrasTraducidas = new List<string>();   
+            List<string> palabrasTraducidas = new List<string>();
 
             foreach (string palabraSans in palabrasSans)
             {
@@ -56,7 +58,11 @@ namespace ProyectoYoga_PixelPulse
                 }
                 else
                 {
-                    palabrasTraducidas.Add(string.Join(" ", palabraSans));
+                    if (!Morfema.diccionarioSansEs.ContainsKey(palabraSans))
+                    {
+                        return null;
+                    }
+
                 }
             }
 
@@ -76,5 +82,6 @@ namespace ProyectoYoga_PixelPulse
         public List<string> GetMorfemas() { return morfemas; }
     }
 
-    
+
+
 }
