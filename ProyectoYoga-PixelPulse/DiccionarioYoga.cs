@@ -49,7 +49,7 @@ namespace ProyectoYoga_PixelPulse
         {
 
             string textoAMorfema = BusquedaTextBox.Text;
-            textoAMorfema = char.ToUpper(textoAMorfema[0]) + textoAMorfema.Substring(1);
+            textoAMorfema = char.ToUpper(textoAMorfema[0]) + textoAMorfema.Substring(1).ToLower();
 
             // Verificar si el texto está vacío o solo contiene números
             if (string.IsNullOrWhiteSpace(textoAMorfema))
