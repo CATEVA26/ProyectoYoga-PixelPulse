@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DiccionarioYoga));
             BusquedaTextBox = new TextBox();
             label1 = new Label();
@@ -38,6 +39,7 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            contextMenuStrip1 = new ContextMenuStrip(components);
             SuspendLayout();
             // 
             // BusquedaTextBox
@@ -129,6 +131,12 @@
             label4.TabIndex = 8;
             label4.Text = "Morfemas ";
             // 
+            // contextMenuStrip1
+            // 
+            contextMenuStrip1.ImageScalingSize = new Size(20, 20);
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(61, 4);
+            // 
             // DiccionarioYoga
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -143,8 +151,9 @@
             Controls.Add(BusquedaButton);
             Controls.Add(label1);
             Controls.Add(BusquedaTextBox);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "DiccionarioYoga";
-            Text = "Form1";
+            Text = "YogaPose Translate";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -160,5 +169,6 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private ContextMenuStrip contextMenuStrip1;
     }
 }
