@@ -44,9 +44,10 @@
             // 
             // BusquedaTextBox
             // 
-            BusquedaTextBox.Location = new Point(248, 108);
+            BusquedaTextBox.Location = new Point(217, 81);
+            BusquedaTextBox.Margin = new Padding(3, 2, 3, 2);
             BusquedaTextBox.Name = "BusquedaTextBox";
-            BusquedaTextBox.Size = new Size(267, 27);
+            BusquedaTextBox.Size = new Size(234, 23);
             BusquedaTextBox.TabIndex = 0;
             // 
             // label1
@@ -54,18 +55,19 @@
             label1.AutoSize = true;
             label1.Enabled = false;
             label1.Font = new Font("Sitka Banner", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(270, 57);
+            label1.Location = new Point(236, 43);
             label1.Name = "label1";
-            label1.Size = new Size(247, 40);
+            label1.Size = new Size(190, 32);
             label1.TabIndex = 1;
             label1.Text = "Diccionario de asanas";
             // 
             // BusquedaButton
             // 
             BusquedaButton.Image = (Image)resources.GetObject("BusquedaButton.Image");
-            BusquedaButton.Location = new Point(521, 95);
+            BusquedaButton.Location = new Point(456, 71);
+            BusquedaButton.Margin = new Padding(3, 2, 3, 2);
             BusquedaButton.Name = "BusquedaButton";
-            BusquedaButton.Size = new Size(53, 52);
+            BusquedaButton.Size = new Size(46, 39);
             BusquedaButton.TabIndex = 2;
             BusquedaButton.UseVisualStyleBackColor = true;
             BusquedaButton.Click += BuscarCoincidencia;
@@ -73,29 +75,35 @@
             // ESTextBox
             // 
             ESTextBox.BorderStyle = BorderStyle.FixedSingle;
-            ESTextBox.Location = new Point(65, 201);
+            ESTextBox.Location = new Point(57, 151);
+            ESTextBox.Margin = new Padding(3, 2, 3, 2);
             ESTextBox.Multiline = true;
             ESTextBox.Name = "ESTextBox";
-            ESTextBox.Size = new Size(285, 170);
+            ESTextBox.ReadOnly = true;
+            ESTextBox.Size = new Size(250, 128);
             ESTextBox.TabIndex = 3;
             // 
             // ENTextBox
             // 
             ENTextBox.BorderStyle = BorderStyle.FixedSingle;
-            ENTextBox.Location = new Point(395, 201);
+            ENTextBox.Location = new Point(346, 151);
+            ENTextBox.Margin = new Padding(3, 2, 3, 2);
             ENTextBox.Multiline = true;
             ENTextBox.Name = "ENTextBox";
-            ENTextBox.Size = new Size(285, 170);
+            ENTextBox.ReadOnly = true;
+            ENTextBox.Size = new Size(250, 128);
             ENTextBox.TabIndex = 4;
             ENTextBox.TextChanged += ENTextBox_TextChanged;
             // 
             // MorfemaTextBox
             // 
             MorfemaTextBox.BorderStyle = BorderStyle.FixedSingle;
-            MorfemaTextBox.Location = new Point(147, 423);
+            MorfemaTextBox.Location = new Point(129, 317);
+            MorfemaTextBox.Margin = new Padding(3, 2, 3, 2);
             MorfemaTextBox.Multiline = true;
             MorfemaTextBox.Name = "MorfemaTextBox";
-            MorfemaTextBox.Size = new Size(427, 170);
+            MorfemaTextBox.ReadOnly = true;
+            MorfemaTextBox.Size = new Size(374, 128);
             MorfemaTextBox.TabIndex = 5;
             // 
             // label2
@@ -103,9 +111,9 @@
             label2.AutoSize = true;
             label2.Enabled = false;
             label2.Font = new Font("Sitka Banner", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(65, 165);
+            label2.Location = new Point(57, 124);
             label2.Name = "label2";
-            label2.Size = new Size(84, 33);
+            label2.Size = new Size(69, 28);
             label2.TabIndex = 6;
             label2.Text = "Español";
             // 
@@ -114,20 +122,20 @@
             label3.AutoSize = true;
             label3.Enabled = false;
             label3.Font = new Font("Sitka Banner", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(395, 165);
+            label3.Location = new Point(346, 124);
             label3.Name = "label3";
-            label3.Size = new Size(65, 33);
+            label3.Size = new Size(55, 28);
             label3.TabIndex = 7;
-            label3.Text = "Ingles";
+            label3.Text = "Inglés";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Enabled = false;
             label4.Font = new Font("Sitka Banner", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(147, 387);
+            label4.Location = new Point(129, 290);
             label4.Name = "label4";
-            label4.Size = new Size(107, 33);
+            label4.Size = new Size(89, 28);
             label4.TabIndex = 8;
             label4.Text = "Morfemas ";
             // 
@@ -139,9 +147,9 @@
             // 
             // DiccionarioYoga
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(729, 636);
+            ClientSize = new Size(638, 477);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -152,6 +160,7 @@
             Controls.Add(label1);
             Controls.Add(BusquedaTextBox);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 2, 3, 2);
             Name = "DiccionarioYoga";
             Text = "YogaPose Translate";
             ResumeLayout(false);
