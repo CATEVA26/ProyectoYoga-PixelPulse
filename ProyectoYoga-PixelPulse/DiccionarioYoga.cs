@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace ProyectoYoga_PixelPulse
 {
     public partial class DiccionarioYoga : Form
@@ -45,10 +47,10 @@ namespace ProyectoYoga_PixelPulse
 
         }
 
-        private async void BusquedaButton_Click(object sender, EventArgs e)
+        private async void BuscarCoincidencia(object sender, EventArgs e)
         {
 
-            string textoAMorfema = BusquedaTextBox.Text;
+            string textoAMorfema = BusquedaTextBox.Text.Trim();
             
 
             // Verificar si el texto está vacío o solo contiene números
@@ -64,7 +66,7 @@ namespace ProyectoYoga_PixelPulse
                 return;  // Salir del método si hay un error
             }
 
-            textoAMorfema = char.ToUpper(textoAMorfema[0]) + textoAMorfema.Substring(1).ToLower();
+            textoAMorfema = FormatearPalabra(textoAMorfema);
 
             // Verificar si la cadena contiene un signo de subrayado (_) o un punto (.)
             if (textoAMorfema.Contains("_") || textoAMorfema.Contains("."))
@@ -75,11 +77,12 @@ namespace ProyectoYoga_PixelPulse
 
             var Traductor = new Traductor();
             Postura postura = new Postura(textoAMorfema);
+           
             //MorfemaTextBox.Text = string.Join("\r\n", postura.GetMorfemas());
             MorfemaTextBox.Text = string.Join("\r\n", postura.GetMorfemas()?.Where(m => m != null) ?? Enumerable.Empty<string>());
 
-            ESTextBox.Text = postura.GetDescripción();
-            ENTextBox.Text = await Traductor.Traducir(postura.GetDescripción());
+            ESTextBox.Text = postura.GetDescripcion();
+            ENTextBox.Text = await Traductor.Traducir(postura.GetDescripcion());
             if (ENTextBox.Equals(string.Empty))
             {
                 MessageBox.Show("Lo sentimos no se ha realizado la traducción");
@@ -97,6 +100,19 @@ namespace ProyectoYoga_PixelPulse
         private void ENTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        static string FormatearPalabra(string oracion)
+        {
+            // Verifica si la cadena es nula o está vacía
+            if (string.IsNullOrEmpty(oracion))
+            {
+                return oracion;
+            }
+
+            TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
+            string oracionFormateada = textInfo.ToTitleCase(oracion.ToLower());
+
+            return oracionFormateada;
         }
     }
 }

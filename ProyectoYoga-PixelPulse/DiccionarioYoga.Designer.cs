@@ -68,7 +68,7 @@
             BusquedaButton.Size = new Size(53, 52);
             BusquedaButton.TabIndex = 2;
             BusquedaButton.UseVisualStyleBackColor = true;
-            BusquedaButton.Click += BusquedaButton_Click;
+            BusquedaButton.Click += BuscarCoincidencia;
             // 
             // ESTextBox
             // 

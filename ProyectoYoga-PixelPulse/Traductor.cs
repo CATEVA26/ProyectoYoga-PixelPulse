@@ -10,10 +10,6 @@ namespace ProyectoYoga_PixelPulse
     internal class Traductor
     {
         private readonly HttpClient _httpClient;
-        public class TranslationResult
-        {
-            public string TranslationText { get; set; }
-        }
         public Traductor() {
             _httpClient = new();
         
@@ -22,6 +18,7 @@ namespace ProyectoYoga_PixelPulse
         {
             string apiUrl = "https://api-inference.huggingface.co/models/Helsinki-NLP/opus-mt-es-en";
             string apiKey = "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";
+            inputText = inputText.Contains("Guerrero") ? inputText += "." : inputText;
 
             try
             {
@@ -53,7 +50,7 @@ namespace ProyectoYoga_PixelPulse
                 }
                 else
                 {
-                    return $"Error en la solicitud: {response.StatusCode} - {response.ReasonPhrase}";
+                    return " ";
                 }
             }
             catch (Exception ex)

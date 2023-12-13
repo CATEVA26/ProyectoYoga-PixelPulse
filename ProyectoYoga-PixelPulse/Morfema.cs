@@ -29,7 +29,7 @@ namespace ProyectoYoga_PixelPulse
     {"Eka",Res.uno},
     {"Pada",Res.pie},
     {"Raja",Res.real},
-    {"Kapota:",Res.paloma},
+    {"Kapota",Res.paloma},
     {"Hasta",Res.mano},
     {"Parivrtta",Res.invertido},
     {"Janu", Res.rodilla},
@@ -62,7 +62,13 @@ namespace ProyectoYoga_PixelPulse
                 {
                     // Separar la palabra y agregar la 'A' a la otra parte
                     string otraParte = palabra.Substring(0, palabra.Length - 5);
-                    morfemas.AddRange(TraducirMorfema(otraParte + "a Asana"));
+                    try {
+                        morfemas.AddRange(TraducirMorfema(otraParte + "a Asana"));
+                    }catch (Exception e)
+                    {
+                        return morfemas;
+                    }
+                    
                 }
                 else
                 {
@@ -75,6 +81,7 @@ namespace ProyectoYoga_PixelPulse
         }
         private static bool TieneNumerosRomanos(string cadena)
         {
+            cadena = cadena.ToUpper();
             string patron = @"^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$";
             return Regex.IsMatch(cadena, patron);
         }

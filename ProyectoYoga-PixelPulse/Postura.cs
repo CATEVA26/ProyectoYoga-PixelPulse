@@ -18,7 +18,7 @@ namespace ProyectoYoga_PixelPulse
             {"Tadasana","Postura de la Montaña"},
             {"Adho Mukha Svanasana","Perro mirando hacia abajo"},
             {"Virabhadrasana I","Guerrero I"},
-            {"Virabhadrasana II","Guerrero II"},
+            {"Virabhadrasana Ii","Guerrero II"},
             {"Vrikshasana","Postura del Árbol"},
             {"Balasana","Postura del Niño"},
             {"Ardha Bhujangasana","Postura de la Cobra a la mitad"},
@@ -69,7 +69,7 @@ namespace ProyectoYoga_PixelPulse
             // Concatena las palabras traducidas para formar el texto traducido
             return string.Join(" ", palabrasTraducidas);
         }
-        public string GetDescripción()
+        public string GetDescripcion()
         {
             return descripcion ?? string.Empty;
         }
